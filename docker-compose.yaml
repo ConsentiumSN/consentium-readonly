@@ -1,0 +1,21 @@
+version: "3.5"
+
+volumes:
+  gen-data:
+
+services:
+  n0:
+    build: .
+    command: [/app/entrypoint.sh]
+    environment:
+      PEERIP1: "47.52.241.227:9010"
+      PEERIP2: "47.52.241.227:9011"
+      PEERIP3: "47.52.241.227:9012"
+    ports:
+      - "0.0.0.0:8888:8888"
+      - "0.0.0.0:8080:8080"
+      - "0.0.0.0:9010:9010"
+    volumes:
+      - ./entrypoint.sh:/app/entrypoint.sh
+      - ./gen-data:/app/data-dir
+    restart: always
