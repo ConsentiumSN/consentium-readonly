@@ -8,9 +8,9 @@ services:
     build: .
     command: [/app/entrypoint.sh]
     environment:
-      PEERIP1: "47.52.241.227:9010"
-      PEERIP2: "47.52.241.227:9011"
-      PEERIP3: "47.52.241.227:9012"
+      PEERIP1: "47.75.184.144:9010"
+      PEERIP2: "47.75.184.144:3039"
+      PEERIP3: "47.244.199.48:9010"
     ports:
       - "0.0.0.0:8888:8888"
       - "0.0.0.0:8080:8080"
